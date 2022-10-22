@@ -17,6 +17,7 @@
     text-overflow: ellipsis;
   }
   .left-side {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,6 +28,17 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    .timer {
+      position: absolute;
+      font-size: 14px;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 5px;
+      margin: 5px;
+      z-index: 99999;
     }
     @media (max-width: 550px) {
       max-width: 160px;
