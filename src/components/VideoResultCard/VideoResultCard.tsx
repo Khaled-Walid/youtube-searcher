@@ -1,12 +1,9 @@
 import React from 'react';
 import './styles.scss';
-import {
-  Link,
-} from 'react-router-dom';
 
 export default function VideoResultCard():JSX.Element {
   return (
-    <Link to="link.com" className="video-result-card">
+    <a href="https://www.link.com" className="video-result-card" target="_blank" rel="noreferrer">
       <div className="left-side">
         <img className="thumbnail" src="https://i.ytimg.com/vi/1CptfMEEC8g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDwRXBXzlEglP3_Sj4W2GRWZs-NVw" alt="video thumbnail" />
       </div>
@@ -23,6 +20,6 @@ export default function VideoResultCard():JSX.Element {
         </p>
 
       </div>
-    </Link>
+    </a>
   );
 }
