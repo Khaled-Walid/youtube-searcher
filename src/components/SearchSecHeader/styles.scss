@@ -1,0 +1,33 @@
+.second-header-wide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  @media (max-width: 420px) {
+    justify-content: flex-end;
+  }
+  .typography {
+    color: #3e3d3d;
+    font-weight: 400;
+    @media (max-width: 420px) {
+      display: none;
+    }
+  }
+  .filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    font-weight: 700;
+    opacity: 0.5;
+    height: 80%;
+    border-radius: 2px;
+    svg {
+      margin-right: 8px;
+    }
+    &:hover {
+      background-color: #dbd9d9;
+    }
+  }
+}
