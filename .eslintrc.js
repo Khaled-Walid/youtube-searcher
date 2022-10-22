@@ -11,5 +11,7 @@ module.exports = {
     project: "./tsconfig.json",
   },
   plugins: ["react"],
-  rules: {},
+  rules: {
+    "react/require-default-props": "off",
+  },
 };
