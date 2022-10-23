@@ -1,12 +1,16 @@
 import React from 'react';
+import { ChannelResultCardProps } from '../ChannelResultCard/ChannelResultCard';
+import { ListResultCardProps } from '../ListResultCard/ListResultCard';
+import LoadingSpinner from '../LoadingSpinner';
 import SearchHeader from '../SearchHeader';
 import SearchResultsList from '../SearchResultsList';
-import mockList from '../SearchResultsList/mockList';
 import SearchSecHeader from '../SearchSecHeader';
+import { VideoResultCardProps } from '../VideoResultCard/VideoResultCard';
 import './styles.scss';
 
 interface SearchPageLayoutData {
-  resultsNum: string;
+  secHeaderData: { resultsNum: string; }
+  resultsListData: (VideoResultCardProps | ChannelResultCardProps | ListResultCardProps)[]
 }
 
 interface SearchPageLayoutProps {
@@ -18,8 +22,15 @@ export default function SearchPageLayout({ data }:SearchPageLayoutProps):JSX.Ele
     <div>
       <SearchHeader />
       <main className="main">
-        <SearchSecHeader resultsNum={data?.resultsNum ?? '0'} />
-        <SearchResultsList data={mockList} />
+        {
+          data ? (
+            <>
+              <SearchSecHeader resultsNum={data?.secHeaderData.resultsNum ?? '0'} />
+              <SearchResultsList data={data?.resultsListData} />
+            </>
+          ) : <LoadingSpinner />
+        }
+
       </main>
     </div>
   );
