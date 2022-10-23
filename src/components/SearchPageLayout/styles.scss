@@ -1,0 +1,7 @@
+.main {
+  width: 65%;
+  margin: auto;
+  @media (max-width: 550px) {
+    width: 90%;
+  }
+}
