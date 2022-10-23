@@ -1,10 +1,14 @@
 import React from 'react';
 import './styles.scss';
 
-export default function SearchSecHeader():JSX.Element {
+interface SearchSecHeaderProps {
+  resultsNum: string
+}
+
+export default function SearchSecHeader({ resultsNum }:SearchSecHeaderProps):JSX.Element {
   return (
     <div className="second-header-wide">
-      <h5 className="typography ">About 1,000,000,000 results filtered results</h5>
+      <h5 className="typography ">{`About ${resultsNum} results filtered results`}</h5>
       <button type="button" className="filters">
         <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <g>

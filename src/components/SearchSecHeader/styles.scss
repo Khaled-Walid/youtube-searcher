@@ -3,13 +3,13 @@
   align-items: center;
   justify-content: space-between;
   height: 60px;
-  @media (max-width: 420px) {
+  @media (max-width: 550px) {
     justify-content: flex-end;
   }
   .typography {
     color: #3e3d3d;
     font-weight: 400;
-    @media (max-width: 420px) {
+    @media (max-width: 550px) {
       display: none;
     }
   }
