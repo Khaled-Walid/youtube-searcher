@@ -1,0 +1,112 @@
+.list-result-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 200px;
+  width: 100%;
+  text-decoration: none;
+  margin-bottom: 16px;
+  @media (max-width: 550px) {
+    height: 100px;
+  }
+  .clamp-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .left-side {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 360px;
+    width: 50%;
+    min-width: 240px;
+    .thumbnail {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .list-count {
+      box-sizing: border-box;
+      position: absolute;
+      width: 35%;
+      text-align: center;
+      font-size: 14px;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0;
+      color: white;
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    @media (max-width: 550px) {
+      max-width: 160px;
+      min-width: 90px;
+    }
+  }
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+    padding: 0 20px;
+    * {
+      margin: 0;
+    }
+    .title {
+      font-size: 18px;
+      font-weight: 500;
+      color: #333;
+    }
+    .video-info {
+      display: flex;
+      white-space: nowrap;
+      font-size: 14px;
+      font-weight: 400;
+      color: #666666;
+      margin-bottom: 10px;
+      & *:not(:last-child):after {
+        content: "•";
+        margin: 0 4px;
+      }
+      @media (max-width: 550px) {
+        flex-direction: column;
+        & *:not(:last-child):after {
+          content: "";
+        }
+        & :last-child {
+          display: none;
+        }
+      }
+    }
+    .description {
+      font-size: 14px;
+      font-weight: 500;
+      color: #666666;
+      -webkit-line-clamp: 2;
+      @media (max-width: 550px) {
+        display: none;
+      }
+    }
+    .view-list-btn {
+      margin-top: 20px;
+      background-color: white;
+      color: #666666;
+      border: none;
+      font-weight: 500;
+      &:hover {
+        color: #181818;
+      }
+    }
+  }
+}
