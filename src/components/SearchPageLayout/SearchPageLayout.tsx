@@ -8,19 +8,23 @@ import SearchSecHeader from '../SearchSecHeader';
 import { VideoResultCardProps } from '../VideoResultCard/VideoResultCard';
 import './styles.scss';
 
-interface SearchPageLayoutData {
+export interface SearchPageLayoutData {
   secHeaderData: { resultsNum: string; }
   resultsListData: (VideoResultCardProps | ChannelResultCardProps | ListResultCardProps)[]
 }
 
-interface SearchPageLayoutProps {
+export interface SearchPageLayoutProps {
   data?: SearchPageLayoutData | null
+  searchHandler: (query:string) => void
 }
 
-export default function SearchPageLayout({ data }:SearchPageLayoutProps):JSX.Element {
+export default function SearchPageLayout(
+  { data, searchHandler }
+  : SearchPageLayoutProps,
+): JSX.Element {
   return (
     <div>
-      <SearchHeader />
+      <SearchHeader searchHandler={searchHandler} />
       <main className="main">
         {
           data ? (
