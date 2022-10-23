@@ -1,19 +1,21 @@
+/* eslint-disable react/no-unused-prop-types */
 import React from 'react';
 import './styles.scss';
 import SVGListIcon from './SVGListIcon';
 
 export interface ListResultCardProps {
-  kind: 'youtube#list',
+  kind: 'youtube#playlist',
   id: string;
   thumbnail: string;
   listItemsCount: string;
   title: string;
   channelName: string;
-  featSongs: string[];
+  description: string;
+
 }
 
 export default function ListResultCard({
-  id, thumbnail, listItemsCount, title, channelName, featSongs,
+  id, thumbnail, listItemsCount, title, channelName, description,
 }:ListResultCardProps):JSX.Element {
   return (
     <a href={`https://www.youtube.com/playlist?list=${id}`} className="list-result-card" target="_blank" rel="noreferrer">
@@ -29,8 +31,7 @@ export default function ListResultCard({
         <div className="video-info">
           <p>{channelName}</p>
         </div>
-        <p className="clamp-text description">{featSongs[0]}</p>
-        <p className="clamp-text description">{featSongs[1]}</p>
+        <p className="clamp-text description">{description}</p>
         <button type="button" className="view-list-btn">VIEW FULL PLAYLIST</button>
       </div>
     </a>
