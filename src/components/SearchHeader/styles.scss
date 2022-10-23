@@ -6,6 +6,13 @@
   height: 60px;
   background-color: #fff;
   border-bottom: 1px solid #e6e6e6;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999;
+  @media (max-width: 550px) {
+    position: inherit;
+  }
   .search {
     display: flex;
     align-items: center;
