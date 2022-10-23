@@ -21,17 +21,17 @@ const mockList: (VideoResultCardProps | ChannelResultCardProps | ListResultCardP
     thumbnail: 'https://yt3.ggpht.com/5oUY3tashyxfqsjO5SGhjT4dus8FkN9CsAHwXWISFrdPYii1FudD4ICtLfuCw6-THJsJbgoY=s176-c-k-c0x00ffffff-no-rj',
     channelName: 'PewDiePie',
     subs: '111M',
-    vidoes: '4511',
+    videos: '4511',
     description: 'I make videos.',
   },
   {
-    kind: 'youtube#list',
+    kind: 'youtube#playlist',
     id: 'PLz58QJ68R9CTzviQpTb3ZyPFfgaizXxPQ',
     thumbnail: 'https://i.ytimg.com/vi/k3yrofQuP3E/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBQJznsVJt9aJqG2iZcEPQk1BXd1Q',
     listItemsCount: '405',
     title: 'INTERESTING DOCUMENTARIES 2',
     channelName: 'THOADUS',
-    featSongs: ['the hunt for eagle 56', 'Stealth Technology - Invisible And Deadly | Full Documentary'],
+    description: 'the hunt for eagle 56 Stealth Technology - Invisible And Deadly | Full Documentary',
   },
   {
     kind: 'youtube#video',
@@ -50,17 +50,17 @@ const mockList: (VideoResultCardProps | ChannelResultCardProps | ListResultCardP
     thumbnail: 'https://yt3.ggpht.com/5oUY3tashyxfqsjO5SGhjT4dus8FkN9CsAHwXWISFrdPYii1FudD4ICtLfuCw6-THJsJbgoY=s176-c-k-c0x00ffffff-no-rj',
     channelName: 'PewDiePie',
     subs: '111M',
-    vidoes: '4511',
+    videos: '4511',
     description: 'I make videos.',
   },
   {
-    kind: 'youtube#list',
+    kind: 'youtube#playlist',
     id: 'PLz58QJ68R9CTzviQpTb3ZyPFfgaizXxPQ',
     thumbnail: 'https://i.ytimg.com/vi/k3yrofQuP3E/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBQJznsVJt9aJqG2iZcEPQk1BXd1Q',
     listItemsCount: '405',
     title: 'INTERESTING DOCUMENTARIES 2',
     channelName: 'THOADUS',
-    featSongs: ['the hunt for eagle 56', 'Stealth Technology - Invisible And Deadly | Full Documentary'],
+    description: 'the hunt for eagle 56 Stealth Technology - Invisible And Deadly | Full Documentary',
   }];
 
 export default mockList;

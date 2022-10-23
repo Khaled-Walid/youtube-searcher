@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import ChannelResultCard from '../ChannelResultCard';
 import { ChannelResultCardProps } from '../ChannelResultCard/ChannelResultCard';
@@ -5,6 +6,7 @@ import ListResultCard from '../ListResultCard';
 import { ListResultCardProps } from '../ListResultCard/ListResultCard';
 import VideoResultCard from '../VideoResultCard';
 import { VideoResultCardProps } from '../VideoResultCard/VideoResultCard';
+import './styles.scss';
 
 export interface SearchResultsListProps {
   data: (VideoResultCardProps | ChannelResultCardProps | ListResultCardProps)[]
@@ -21,7 +23,7 @@ function renderListItem(item: (
   if (item.kind === 'youtube#channel') {
     return <li key={item.id}><ChannelResultCard {...item} /></li>;
   }
-  if (item.kind === 'youtube#list') {
+  if (item.kind === 'youtube#playlist') {
     return (
       <li key={item.id}>
         <ListResultCard {...item} />
