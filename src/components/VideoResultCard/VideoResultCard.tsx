@@ -1,25 +1,37 @@
 import React from 'react';
 import './styles.scss';
 
-export default function VideoResultCard():JSX.Element {
+export interface VideoResultCardProps {
+  kind: 'youtube#video',
+  id: string;
+  thumbnail: string;
+  duration: string;
+  title: string;
+  channelName: string;
+  views: string;
+  date: string;
+  description: string;
+}
+
+export default function VideoResultCard({
+  id, thumbnail, duration, title, channelName, views, date, description,
+}:VideoResultCardProps):JSX.Element {
   return (
-    <a href="https://www.link.com" className="video-result-card" target="_blank" rel="noreferrer">
+    <a href={`https://www.youtube.com/watch?v=${id}`} className="video-result-card" target="_blank" rel="noreferrer">
       <div className="left-side">
-        <img className="thumbnail" src="https://i.ytimg.com/vi/1CptfMEEC8g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDwRXBXzlEglP3_Sj4W2GRWZs-NVw" alt="video thumbnail" />
-        <span className="timer">1:20:35</span>
+        <img className="thumbnail" src={`${thumbnail}`} alt="video thumbnail" />
+        <span className="duration">{duration}</span>
       </div>
       <div className="right-side">
-        <h3 className="clamp-text title">Video Title</h3>
+        <h3 className="clamp-text title">{title}</h3>
         <div className="video-info">
-          <p>Channel Name</p>
-          <p>1.2M views</p>
-          <p>1 year ago</p>
+          <p>{channelName}</p>
+          <p>{`${views} views`}</p>
+          <p>{date}</p>
         </div>
         <p className="clamp-text description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          ultricies, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, vel asdasd sa asd a s asa
+          {description}
         </p>
-
       </div>
     </a>
   );
