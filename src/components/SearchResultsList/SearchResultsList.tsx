@@ -35,8 +35,10 @@ function renderListItem(item: (
 
 export default function SearchResultsList({ data }:SearchResultsListProps):JSX.Element {
   return (
-    <ul className="search-results-list">
-      {data.map(renderListItem)}
-    </ul>
+    data.length > 0 ? (
+      <ul className="search-results-list">
+        {data.map(renderListItem)}
+      </ul>
+    ) : <div className="search-results-list search-results-list__empty"><span>No results!</span></div>
   );
 }

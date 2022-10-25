@@ -4,3 +4,11 @@
   align-items: "flex-start";
   list-style: none;
 }
+
+.search-results-list__empty {
+  text-align: center;
+  color: #999;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 32px;
+}
